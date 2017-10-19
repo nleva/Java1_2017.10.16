@@ -7,14 +7,15 @@ import java.util.TreeSet;
 public class WordsCount {
 
 	public static void main(String[] args) {
+		
+		
 		String s1 = "  fsdfh sdhfgsfh     sdhfgdhfsdg fsghdf sdghfvs dfvdghfv sd sd sd sd  ";
 		String s2 = "  123 werfwe 222 333 444 444 444 sd sd sd sd  ";
 		
 
 		ArrayList<String> strings = new ArrayList<>();
-		
+//		strings.listIterator().
 		TreeSet<String> set = new TreeSet<>();
-		
 
 		addWordsToArray(s1, strings);
 		addWordsToArray(s2, strings);

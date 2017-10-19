@@ -1,6 +1,8 @@
 package ru.spec.java1.lec4;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 
 public class TimeTest {
 
@@ -11,16 +13,14 @@ public class TimeTest {
 	}
 
 	private static void test() {
-		long millis = System.currentTimeMillis();
-		long nano = System.nanoTime() / 1000_000;
 		long ts = System.nanoTime();
-		System.out.println(millis);
-		System.out.println(nano);
-
-		long startTime = millis - nano;
-		System.out.println(new Date(startTime));
+		ArrayList<Integer> list = new ArrayList<>();
+		
+		for(int i=0 ; i < 100_000; i++) {
+			list.add(list.size()/2,i);
+		}
 //		System.out.println(System.currentTimeMillis() - millis);
-		System.out.println(System.nanoTime() - ts+"ns");
+		System.out.println((System.nanoTime() - ts)/1000/1000d+"ms "+list.size());
 	}
 
 }

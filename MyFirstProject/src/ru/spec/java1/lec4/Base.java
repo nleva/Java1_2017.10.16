@@ -1,19 +1,28 @@
 package ru.spec.java1.lec4;
 
-public class Base {
+import ru.spec.java1.lec5.Employee;
+
+public class Base{
 
 	String name="123";
 	
+	int age = 1;
+	
 	public Base() {
-		super();
+//		super("",0);
 		//init fields
 		
 		System.out.println("Base() name="+name);
-		m();
+//		m();
+	}
+	
+	public Base(String name) {
+		this();
+		this.name = name;
 	}
 	
 	
-	void m() {
+	void f() {
 		System.out.println("Base.m() " + name);
 	}
 	
@@ -23,7 +32,8 @@ public class Base {
 	}
 	
 	public static void main(String[] args) {
-		new Ext().m();
+		System.out.println("START");
+		new Employee("123", 123);
 		
 
 	}

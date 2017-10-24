@@ -28,7 +28,10 @@ public class FilesTest {
 		
 		for (; scanner.hasNextLine();) {
 			String[] nextLine = scanner.nextLine().toLowerCase().split("[^а-яё]+");// авы 234 ыва
-			//for
+			for (String word : nextLine) {
+				Integer count = stat.get(word);
+				count = count==null?1:count+1;
+			}
 //			System.out.println(nextLine);
 		}
 

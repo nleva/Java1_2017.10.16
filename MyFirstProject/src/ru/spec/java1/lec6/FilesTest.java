@@ -31,6 +31,11 @@ public class FilesTest {
 			//for
 //			System.out.println(nextLine);
 		}
+1718                InputStream in = System.in;1920                File file = new File("C:/java/test.txt");21                in = new FileInputStream(file);22//              in = new URL("http://specialist.ru").openStream();23                24                25                Scanner scanner = new Scanner(in);2627                Map<String, Integer> stat = new HashMap<>();28                29                for (; scanner.hasNextLine();) {30                        String[] nextLine = scanner.nextLine().toLowerCase().split("[^а-яё]+");// авы 234 ыва31                        //for32//                      System.out.println(nextLine);
+
+
+		
+		
 
 	}
 }

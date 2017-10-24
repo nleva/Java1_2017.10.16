@@ -1,4 +1,4 @@
-package ru.spec.java1.lec6;
+package ru.spec.java1.lec7;
 
 public class RegExpTest {
 	public static void main(String[] args) {

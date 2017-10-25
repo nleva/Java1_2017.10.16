@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.ser.std.MapProperty;
 
 public class EntryPoint {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args)  {
 //		specUrls();
 //		hhApi();
 		
@@ -26,7 +26,12 @@ public class EntryPoint {
 		//    ->select (.js-score).text -> int -> Map<Int,List<String>>
 		//    ->select ( .comment__message )
 		// TODO save to file
-		
+		try {
+			Document doc = Jsoup.parse(new URL("http://www.specialist.ru"),5_000);
+		} catch (ArithmeticException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
